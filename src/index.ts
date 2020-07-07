@@ -10,7 +10,7 @@ server.listen(port);
 
 const logger = new Logger();
 
-server.on(`listening`, function (): void {
+server.on(`listening`, () => {
   const addr = server.address();
   const bind = typeof addr === `string` ? `pipe ${addr}` : `port ${addr ? addr.port : `no port`}`;
   logger.info(`Listening on ${bind}`);

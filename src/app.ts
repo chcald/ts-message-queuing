@@ -3,10 +3,9 @@ import * as express from 'express';
 import { Logger } from '../logger/logger'; // to log everything that happens to used instead of console log
 import { Squiss } from 'squiss-ts';
 import { Response, Request } from 'express';
-import Idata  from './Idata'
+import Idata from './Idata';
 const URL_SQS_QUEUE = `http://localhost`;
 const SQS_PORT = `9324`;
-
 
 const awsConfig = {
   accessKeyId: `dummy`,
