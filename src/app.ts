@@ -43,12 +43,17 @@ class App {
       .catch((err) => console.log(err));
   }
 
-  // Configure Express middleware.
+  /*
+  * Configure Express middleware.
+  */
   private middleware(): void {
     this.express.use(bodyParser.json());
     this.express.use(bodyParser.urlencoded({ extended: false }));
   }
 
+  /*
+  * Configure routes.
+  */
   private routes(): void {
     this.express.get(`/`, (req: Request, res: Response) => {
       res.send(`ts-message-queuing service works!!`);
